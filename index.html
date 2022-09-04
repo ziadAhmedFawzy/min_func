@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="this is funtion for Number">
+    <title>min number funtion</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>min number function</h1>
+        <pre>
+            <div class="window">
+                <span class="red"></span>
+                <span class="yellow"></span>
+                <span class="green"></span>
+            </div>
+            <code>
+        // min number function
+
+        function minNum(...num) {
+            num.sort();
+            for(let i = 0; i &lt; num.length; i++)
+            {
+                for(let x = 0; x &lt; num.length; x++)
+                {
+                    if(num[i] &lt; num[i + 1])
+                    {
+                        return num[i];
+                    }
+                }
+            }
+        }
+        
+        console.log(minNum(1,2,3,4,5,6,7,89));
+        console.log(minNum(8,5,3,4,2,41,0));
+        console.log(minNum(8,5,3,0,4,2,41));
+        console.log(minNum(8,5,3,4,2,41,0));
+        console.log(minNum(8,5,3,4,2,41,0));
+            </code>
+        </pre>
+    <button id="go-now">go to another function</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
